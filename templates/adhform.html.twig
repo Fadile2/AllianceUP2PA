@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+{% block title %}Créer sa carte Alliance {% endblock %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+    <div class="page-header">
+        <h1>Créer ma carte Alliance</h1>
+        <hr>
+    </div>
+    <div class="row">
+        <h3>Mes informations</h3>
+    </div>
+    <div>
+        Coucou voici le formulaire d'ajout !<br><br>
+        {{ form_start(form) }}
+        {{ form_row(form.name, {"label":"Nom : "}) }}
+        {{ form_row(form.firstname, {"label":"Prénom :"}) }}
+        {{ form_row(form.birthday, {"label":"Date de naissance : "}) }}
+        {{ form_row(form.email, {"label":"Email : "}) }}
+        {{ form_row(form.matricule, {"label":"N° de matricule : "}) }}
+        {{ form_row(form.gdpr_consent, {"label":"Consentement règlementation RGPD "}) }}
+        {{ form_row(form.picture, {"label" : "Photo de vous : "}) }}<br>
+        {% if pict is defined %}{{ pict }} {% endif %}
+        <br>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+        {{ form_end(form) }}
+
+    </div>
+{% endblock %}
