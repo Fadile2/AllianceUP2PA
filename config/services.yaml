@@ -4,7 +4,12 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: 'en'
+    locale: 'fr'
+    pictures_directory: '%kernel.project_dir%/public/profil_pictures'
+    logos_directory: '%kernel.project_dir%/public/logo_partner'
+
+m_kebza_google_maps:
+    api_key: 'AIzaSyDgza4Cku-d3jqrXhaxeCYoHFyufnDDdTY'
 
 services:
     # default configuration for services in *this* file
